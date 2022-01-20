@@ -14,7 +14,7 @@ class App extends PureComponent {
     return (
       <div className="container">
       <header>
-        <h1>l5_t5_задание_5</h1>
+        <h1>l5_t5, задание 5: новостная лента</h1>
         <button className="btn-revert" onClick={this.revert}>Revert</button>
       </header>
       <p>для корректной работы кнопки  Revert (открыта всегда первая статья в списке) используется <strong>componentDidUpdate</strong></p>
