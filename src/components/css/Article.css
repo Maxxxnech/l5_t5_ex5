@@ -1,12 +1,17 @@
+article{
+    width: 100%;
+}
+
 header.articleHeader {
     background-color: lightgrey;
     display: flex;
     justify-content: space-between;
-    width: 200%
 }
 
 section{
     background-color: gray;
+    padding: 5px 10px 5px 10px;
+    text-align: justify;
 }
 
 button{

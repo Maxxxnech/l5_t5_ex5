@@ -13,12 +13,11 @@ export default class Article extends PureComponent {
 
   render() {
     const { article } = this.props;
-    const style = { width: "50%" };
     const body = (
       <section>{this.state.isOpen ? article.text : article.textShort}</section>
     );
     return (
-      <article style={style}>
+      <article>
         <header className="articleHeader">
           <h2>{article.title}</h2>
           <button onClick={this.handleClick} className="btn-article-open">         

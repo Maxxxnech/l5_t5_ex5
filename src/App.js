@@ -17,7 +17,7 @@ class App extends PureComponent {
         <h1>l5_t5_задание_5</h1>
         <button className="btn-revert" onClick={this.revert}>Revert</button>
       </header>
-      <p>для корректной работы кнопки  Revert используется <strong>componentDidUpdate</strong></p>
+      <p>для корректной работы кнопки  Revert (открыта всегда первая статья в списке) используется <strong>componentDidUpdate</strong></p>
       <ArticleList articles={this.state.reverted ? articles.slice().reverse() : articles} />
       </div>
     );
