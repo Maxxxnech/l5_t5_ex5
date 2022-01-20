@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, {PureComponent} from 'react';
+import ArticleList from "./components/ArticlesList"
+import articles from "./data/data.json"
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+class App extends PureComponent {
+  constructor(props){
+    super(props);
+    this.state = {reverted : false}
+    this.revert = this.revert.bind(this);
+  }
+
+  render(){
+    return (
+      <div className="container">
+      <header>
+        <h1>l5_t5_задание_5</h1>
+        <button className="btn-revert" onClick={this.revert}>Revert</button>
       </header>
-    </div>
-  );
+      <p>для корректной работы кнопки  Revert используется <strong>componentDidUpdate</strong></p>
+      <ArticleList articles={this.state.reverted ? articles.slice().reverse() : articles} />
+      </div>
+    );
+  }
+
+  revert(){
+      this.setState(prevState => ({reverted: !prevState.reverted}))
+  }
 }
 
 export default App;

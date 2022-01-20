@@ -1,0 +1,16 @@
+header.articleHeader {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    width: 200%
+}
+
+section{
+    background-color: gray;
+}
+
+button{
+    background-color: lightsteelblue;
+    cursor:pointer;
+    color: blue
+}

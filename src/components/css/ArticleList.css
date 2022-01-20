@@ -1,0 +1,11 @@
+ul{
+    text-align: center;
+}
+.articleListItem{
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 50vw;
+    margin-bottom: 10px;
+    background-color: gray;
+}
